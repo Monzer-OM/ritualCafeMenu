@@ -1,0 +1,84 @@
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px;
+  }
+  
+  .menu-card {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+  }
+  
+  .menu-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .menu-card h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .menu-card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+.order-container {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #order-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #order-list li {
+    margin-bottom: 5px;
+  }
+  /* Same as before, with addition for delete button */
+
+.order-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .order-list li button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .order-list li button:hover {
+    color: red;
+  }
+  body {
+    background-color: #D5BFB0;
+    /*backGround color*/
+}
+
+
+h1{
+  font-family: Arial, sans-serif;
+  text-align: center;
+
+
+}
+h1 img {
+max-width: 100%;
+height: auto;
+}
+  
+  
