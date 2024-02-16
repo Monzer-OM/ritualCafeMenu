@@ -66,7 +66,6 @@ dishes.forEach((dish, index) => {
 });
 
 sendOrderButton.addEventListener('click', () => {
-  // Simulate sending order to WhatsApp
   let orderText = "Your order at [RETUL]:\n";
   const orderItems = orderList.querySelectorAll('li');
   orderItems.forEach(item => {
@@ -74,8 +73,13 @@ sendOrderButton.addEventListener('click', () => {
   });
   orderText += "Please specify any modifications or delivery instructions.";
 
-  // Alert user with instructions to copy and paste into WhatsApp
-  alert(`Please copy the following text and paste it into your WhatsApp message to:\n[Restaurant WhatsApp Number]\n\n${orderText}`);
+  const phoneNumber = '+5349675591'; // Replace with your phone number
+
+  const encodedText = encodeURIComponent(orderText);
+  const url = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+
+  window.open(url, '_blank');
 });
+
 
 // Add logic for order list and further functionality in this script
