@@ -44,7 +44,7 @@ dishes.forEach((dish, index) => {
   card.appendChild(h2);
 
   const price = document.createElement('p');
-  price.textContent = `Price: $${dish.price}`;
+  price.textContent = `Price: ${dish.price}`;
   card.appendChild(price);
 
   const description = document.createElement('p');
@@ -57,7 +57,7 @@ dishes.forEach((dish, index) => {
   button.addEventListener('click', () => {
     // Add item to order list
     const listItem = document.createElement('li');
-    listItem.textContent = `${dish.name} - $${dish.price}`;
+    listItem.textContent = `${dish.name} - ${dish.price}`;
     orderList.appendChild(listItem);
   });
   card.appendChild(button);
