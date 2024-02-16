@@ -42,8 +42,18 @@
       <option value="umm al quwain">Um alquain</option>
 
     </select>
+
     <input type="text" id="Car number" name="Car"><br><br>
-    <ul id="order-list"></ul>
+    <p>Payment method:</p>
+
+    <input type="radio" id="Cash" name="paymentMethod" value="Cash">
+    <label for="Cash">Cash</label><br>
+    <input type="radio" id="Card" name="paymentMethod" value="Card">
+    <label for="Card">Card</label><br>
+    <br>
+
+    <ul id="order-list">
+    </ul>
     
     <button id="send-order">Send Order via WhatsApp</button>
 

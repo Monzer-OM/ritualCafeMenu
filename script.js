@@ -69,11 +69,22 @@ sendOrderButton.addEventListener('click', () => {
   let orderText = "Your order at [RETUL]:\n";
   const carNumber = document.getElementById('Car number').value;
   const city = document.getElementById('city').value;
+  const payment = document.querySelector('input[name="paymentMethod"]:checked');
+  
+  if (!payment) {
+    alert('Please select a payment method.');
+    return;
+  }
+
+  const paymentMethod = payment.value;
   const orderItems = orderList.querySelectorAll('li');
+  
   orderItems.forEach(item => {
     orderText += `- ${item.textContent}\n`;
   });
-  orderText += `Car Number:  ${city}  ${carNumber}\nPlease specify any modifications or delivery instructions.`;
+
+  orderText += `Payment Method: ${paymentMethod}\n`;
+  orderText += `Car Number: ${city}  ${carNumber}\nPlease specify any modifications or delivery instructions.`;
 
   const phoneNumber = '+5349675591'; // Replace with your phone number
 
@@ -82,6 +93,9 @@ sendOrderButton.addEventListener('click', () => {
 
   window.open(url, '_blank');
 });
+
+
+
 
 
 // Add logic for order list and further functionality in this script
