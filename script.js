@@ -173,7 +173,7 @@ dishes.forEach((dish, index) => {
 
   menuCards.item(index).replaceWith(card); // Replace placeholder dishes with real data
 });
-
+  
 
 sendOrderButton.addEventListener('click', () => {
   let orderText = "Your order at [RETUL]:\n";

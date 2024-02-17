@@ -27,6 +27,8 @@ h1 img {
   /* Remove fixed width; grid will determine size */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
+  display: flex;
+  margin-top: 10px;
 }
 
 .menu-card img {
@@ -90,5 +92,39 @@ h1 img {
 .red {
   color: red;
 }
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  grid-gap: 10px; /* Gap between items */
+}
+
+.category-title {
+  grid-column: 1 / -1; /* Span the full width of the grid */
+  margin-top: 20px; /* Space above the category title */
+  text-align: center; /* Center-align the text */
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-card img {
+  width: 100%; /* Ensure images fill the card */
+}
+
+.menu-card button {
+  margin-top: auto; /* Push the button to the bottom of the card */
+}
+
+@media (max-width: 768px) {
+  .menu-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on mobile */
+  }
+}
+
+
+
 
 
