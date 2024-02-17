@@ -3,84 +3,81 @@ const orderList = document.getElementById('order-list');
 const sendOrderButton = document.getElementById('send-order');
 // Replace this with actual menu data
 const dishes = [
+  // ---------------Breakfast--------------------
   {
     name: "CROISSANT",
     price: "18",
     image: "images/CROISSANT.jpeg",
     description: "PLAIN / CHEESE / ZAATAR.",
+    //brakfast
   },
-  {
-    name: "MONT BLANC",
-    price: "36",
-    image: "images/MONT BLANC.jpeg",
-    description: "BAKED CHOCOLATE FUDGE / ICE CREAM / MILK CHOCOLATE SAUCE.",
-  },
+  
   {
     name: "BACON EGG BUN",
     price: "28",
     image: "images/BACON EGG BUN.jpeg",
     description: "Tender chicken simmered in a creamy red curry with vegetables and fragrant spices.",
+    //brakfast
   },
   {
     name: "FIG TOAST",
     price: "34",
     image: "images/FIG TOAST.jpeg",
     description: "Tender chicken simmered in a creamy red curry with vegetables and fragrant spices.",
+    //brakfast
+
   },
-  {
-    name: "GOLDEN DELIGHT",
-    price: "43",
-    image: "images/GOLDEN DELIGHT.jpg",
-    description: "FRESH HOMEMADE CRISPY BRIOCHE / VANILA ICE CREAM / CHOCOLATE",
-  },
+
   {
     name: "SIMIT MUHAMMARA",
     price: '38',
     image: 'images/SIMIT MUHAMMARA.jpg',
     description: 'EGG / MUHAMMARA / TURKISH LABNEH / CHILI BUTTER / SIMIT BREAD',
+    //brakfast
   },
   {
     name: 'LIME AND CORN SALAD',
     price:'34',
     image: 'images/LIME AND CORN SALAD.jpg',
     description : "BABY SPINACH / JARJEER ROCKET LEAF / FETA CHEESE / CHERRY TOMATO / GRILLED CORN / LIME / BLACK OLIVE ",
+    //brakfast
   },
   {
     name: 'CROQUE MADAME',
     price: "43",
     image: "images/CROQUE MADAME.jpg",
-    description: "SOURDOUGH BREAD / BECHAMEL SAUCE / GRUYERE CHEESE / POUCHED EGG / SMOKED TURKEY"
+    description: "SOURDOUGH BREAD / BECHAMEL SAUCE / GRUYERE CHEESE / POUCHED EGG / SMOKED TURKEY",
+    //breakfast
   },
   {
     name: 'RITUAL CAESAR SALAD',
     price: "32",
     image: 'images/RITUAL CAESAR SALAD.jpg',
-    description: "ROMAINE LETTUCE / HOME MADE RITUAL SAUCE / SMOKED BEEF BACON / POACHED EGG / PARMESAN CHEESE / GARLIC CROUTONS"
+    description: "ROMAINE LETTUCE / HOME MADE RITUAL SAUCE / SMOKED BEEF BACON / POACHED EGG / PARMESAN CHEESE / GARLIC CROUTONS",
+    //breakfast
   },
   {
     name: "BURATA SALAD",
     price: "47",
     image: 'images/BURATA SALAD.jpg',
     description: 'BURATA CHEESE / DATES / BABY SPINACH SALAD',
+    //breakfast
   },
   {
     name: "AVOCADO POACHED EGG",
     price: "39",
     image: "images/AVOCADO POACHED EGG.jpg",
     description: "HOMEMADE SOUR DOUGH AVOCADO WITH CHOICE OF EGG", 
+    //breakfast
   }, 
-  {
-    name: "PEANUT BUTTER TART",
-    price: "36",
-    image: "images/PEANUT BUTTER TART.jpg",
-    description: "CHOCOLATE TART BASE / TART GARNISH",
-  },
+  
 
   {
     name: "PORTOBELLO BENEDICT",
     price: "43",
     image: "images/PORTOBELLO BENEDICT.jpg",
     description: "PLAIN CROISSANT / TRUFFLE BECHAMEL / PORTOBELLO MUSHROOM / HOLLANDAISE SAUCE / EGG / PAPRIKA",
+    //breakfast
   },
 
   {
@@ -88,43 +85,73 @@ const dishes = [
     price: '38',
     image: 'images/TURKISH EGG.jpg',
     description: "FRESH LABNAH / YOGURT / PARSLEY / MINT LEAF / BLACK PEPPER",
+    //breakfast
   },
   {
     name: "MUSHROOM TOAST",
     price: "34",
     image: "images/MUSHROOM TOAST.jpg",
     description: "HOMEMADE SOUR DOUGH / PHILADELPHIA CHEESE / TRIO MUSHROOM",
+    //breakfast
   },
   {
     name: "MOZZARELLA PESTO",
     price: "34",
     image: "images/MOZZARELLA PESTO.jpg",
-    description: "SOUR DOUGH BREAD / PESTO / CHERRY TOMATO / BUFFALO MOZZARELLA CHEESE"
+    description: "SOUR DOUGH BREAD / PESTO / CHERRY TOMATO / BUFFALO MOZZARELLA CHEESE",
+    //breakfast
   },
   {
     name: "AVOCADO TOAST",
     price: "36",
     image: "images/AVOCADO TOAST.jpg",
-    description: "HOMEMADE SOUR DOUGH / FETA CHEESE / AVOCADO / BLACK SEED / CHILI FLAKE / LEMON"
+    description: "HOMEMADE SOUR DOUGH / FETA CHEESE / AVOCADO / BLACK SEED / CHILI FLAKE / LEMON",
+    //breakfast
   },
   {
     name: "AVOCADO SCRAMBLE EGG",
     price: "39",
     image: "images/AVOCADO SCRAMBLE EGG.jpg",
     description:"HOMEMADE SOUR DOUGH AVOCADO WITH CHOICE OF EGG",
+    //breakfast
   },
   {
     name: "OMELETTE",
     price: "36",
     image: "images/OMELETTE.jpg",
-    description: "STUFFED: CHEESE.....CHOOSE: TOMATO / MUSHROOM / SPINACH / MIXED SALAD"
+    description: "STUFFED: CHEESE.....CHOOSE: TOMATO / MUSHROOM / SPINACH / MIXED SALAD",
+    //breakfast
   },
+  //----------------sweet delight------------------
   {
     name: "FLUFFY CHEESE CAKE",
     price: "36",
     image: "images/FLUFFY CHEESE CAKE.jpg",
-    description: 'CREAM CHEESE / LEMON EXTRACT / DIGESTIVE BISCUIT / BLUEBERRY SAUCE'
-  }
+    description: 'CREAM CHEESE / LEMON EXTRACT / DIGESTIVE BISCUIT / BLUEBERRY SAUCE',
+    //SWEET DELIGHT
+  },
+  {
+    name: "MONT BLANC",
+    price: "36",
+    image: "images/MONT BLANC.jpeg",
+    description: "BAKED CHOCOLATE FUDGE / ICE CREAM / MILK CHOCOLATE SAUCE.",
+    //SWEET DELIGHT
+  },
+  {
+    name: "PEANUT BUTTER TART",
+    price: "36",
+    image: "images/PEANUT BUTTER TART.jpg",
+    description: "CHOCOLATE TART BASE / TART GARNISH",
+    //SWEET DELIGHT
+  },
+  {
+    name: "GOLDEN DELIGHT",
+    price: "43",
+    image: "images/GOLDEN DELIGHT.jpg",
+    description: "FRESH HOMEMADE CRISPY BRIOCHE / VANILA ICE CREAM / CHOCOLATE",
+    //SWEET DELIGHT
+
+  },
 
   // Add remaining dishes here with their details
 ];
@@ -208,4 +235,17 @@ sendOrderButton.addEventListener('click', () => {
 
   window.open(url, '_blank');
 });
+
+// Scroll to the breakfast section
+document.getElementById('breakfast-button').addEventListener('click', () => {
+  const breakfastSection = document.querySelector('.category-title:nth-of-type(odd)');
+  breakfastSection.scrollIntoView({ behavior: 'smooth' });
+});
+
+// Scroll to the sweets section
+document.getElementById('sweets-button').addEventListener('click', () => {
+  const sweetsSection = document.querySelector('.category-title:nth-of-type(even)');
+  sweetsSection.scrollIntoView({ behavior: 'smooth' });
+});
+
 
