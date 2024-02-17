@@ -201,6 +201,7 @@ sendOrderButton.addEventListener('click', () => {
   orderText += `Car Number: ${city}  ${carNumber}\nPlease specify any modifications or delivery instructions.`;
 
   const phoneNumber = '+5349675591'; // Replace with your phone number
+  orderText = orderText.replaceAll('Delete', '');
 
   const encodedText = encodeURIComponent(orderText);
   const url = `https://wa.me/${phoneNumber}?text=${encodedText}`;
