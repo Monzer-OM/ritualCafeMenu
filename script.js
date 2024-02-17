@@ -51,29 +51,44 @@ dishes.forEach((dish, index) => {
   description.textContent = dish.description;
   card.appendChild(description);
 
-  const button = document.createElement('button');
-  button.classList.add('add-button');
-  button.textContent = '+';
-  button.addEventListener('click', () => {
+  const addButton = document.createElement('button');
+  addButton.classList.add('add-button');
+  addButton.textContent = '+';
+  addButton.addEventListener('click', () => {
     // Add item to order list
     const listItem = document.createElement('li');
     listItem.textContent = `${dish.name} - ${dish.price}`;
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.classList.add('delete-button'); // Add this line
+
+    deleteButton.addEventListener('click', () => {
+      listItem.remove();
+    });
+
+    listItem.appendChild(deleteButton);
     orderList.appendChild(listItem);
   });
-  card.appendChild(button);
+  card.appendChild(addButton);
 
   menuCards.item(index).replaceWith(card); // Replace placeholder dishes with real data
 });
+
 
 sendOrderButton.addEventListener('click', () => {
   let orderText = "Your order at [RETUL]:\n";
   const carNumber = document.getElementById('Car number').value;
   const city = document.getElementById('city').value;
   const payment = document.querySelector('input[name="paymentMethod"]:checked');
+  const paymentMessage = document.getElementById('payment-message');
+
   
   if (!payment) {
-    alert('Please select a payment method.');
-    return;
+    paymentMessage.style.display = 'block'; // Show the message
+    return; // Stop the function execution
+  } else {
+    paymentMessage.style.display = 'none'; // Hide the message
   }
 
   const paymentMethod = payment.value;

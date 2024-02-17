@@ -83,5 +83,12 @@ h1 img {
     grid-template-columns: repeat(2, 1fr); /* Two columns on mobile */
   }
 }
+.delete-button {
+  margin-left: 25px ; /* Adjust the margin as needed */
+}
+
+.red {
+  color: red;
+}
 
 
