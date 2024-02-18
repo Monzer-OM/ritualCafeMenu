@@ -124,27 +124,38 @@ h1 img {
   }
 }
 
+html,
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin: 0;
+  padding: 0;
+}
+
 .buttons-container {
-  display: flex; /* Use flexbox for layout */
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  justify-content: center; /* Center-align the items horizontally */
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+  scroll-snap-type: x mandatory; /* Snap to each button */
+  width: 100vw; /* Full width of the viewport */
+  padding: 10px 0; /* Add some padding */
 }
 
 .button-wrapper {
-  flex: 0 0 calc(25% - 20px); /* Each button wrapper takes 25% of the width with some margin */
-  max-width: calc(25% - 20px); /* Set a maximum width to prevent items from stretching too much */
-  margin: 10px; /* Add some margin between the button wrappers */
-  text-align: center; /* Center-align the content */
+  flex: 0 0 100vw; /* Each button takes the full width of the viewport */
+  scroll-snap-align: start; /* Snap to the start of each button */
+  padding: 0 5px; /* Add some space between buttons */
 }
 
 .buttons-container button {
-  width: 150px; /* Set the width to 150px */
-  height: 100px; /* Set the height to 100px */
-  border-radius: 5px;
+  width: 150px;
+  height: 100px;
   background-size: cover;
   background-position: center;
-  border: none; /* Remove button border */
+  border: none;
+  border-radius: 5px;
 }
+
 
 .button-wrapper span {
   display: block; /* Display the text as a block element */
