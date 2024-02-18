@@ -1,6 +1,9 @@
 const menuCards = document.querySelectorAll('.menu-card');
 const orderList = document.getElementById('order-list');
 const sendOrderButton = document.getElementById('send-order');
+
+
+
 // Replace this with actual menu data
 const dishes = [
   // ---------------Breakfast--------------------
@@ -254,3 +257,31 @@ var swiper = new Swiper('.swiper-container', {
   spaceBetween: 10, // Space between buttons
   loop: true, // Enable loop mode
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const menuCards = document.querySelectorAll('.menu-card');
+
+  const lazyLoad = target => {
+      const io = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  const img = entry.target.querySelector('img');
+                  const dishName = entry.target.getAttribute('data-dish');
+                  const dish = dishes.find(dish => dish.name === dishName);
+                  if (dish) {
+                      img.setAttribute('src', dish.image);
+                      observer.unobserve(entry.target);
+                  }
+              }
+          });
+      });
+
+      io.observe(target);
+  };
+
+  menuCards.forEach(menuCard => {
+      lazyLoad(menuCard);
+  });
+});
+
+
