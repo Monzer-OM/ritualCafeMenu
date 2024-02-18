@@ -250,7 +250,7 @@ document.getElementById('sweets-button').addEventListener('click', () => {
 });
 
 var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 2, // Number of buttons visible at a time
+  slidesPerView: 2.5, // Number of buttons visible at a time
   spaceBetween: 10, // Space between buttons
   loop: true, // Enable loop mode
 });
