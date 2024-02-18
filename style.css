@@ -125,21 +125,63 @@ h1 img {
 }
 
 .buttons-container {
-  text-align: center; /* Center-align the buttons */
-  margin-top: 20px; /* Add some space between the buttons and the menu */
-  
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center; /* Center-align the items horizontally */
+}
+
+.button-wrapper {
+  flex: 0 0 calc(25% - 20px); /* Each button wrapper takes 25% of the width with some margin */
+  max-width: calc(25% - 20px); /* Set a maximum width to prevent items from stretching too much */
+  margin: 10px; /* Add some margin between the button wrappers */
+  text-align: center; /* Center-align the content */
 }
 
 .buttons-container button {
-  margin: 0 10px; /* Add some space between the buttons */
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 10px;
-  color: black;
-  font-weight: bold;
+  width: 150px; /* Set the width to 150px */
+  height: 100px; /* Set the height to 100px */
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  border: none; /* Remove button border */
+}
+
+.button-wrapper span {
+  display: block; /* Display the text as a block element */
+  margin-top: 5px; /* Add some space between the button and text */
+  font-size: 18px;
+  
 }
 
 
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
 
+.swiper-slide {
+  text-align: center;
+}
 
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.button-wrapper button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.button-wrapper button img {
+  width: 120.4px;
+  height: 128 px;
+  border-radius: 5px; /* Optional: Adds rounded corners to the image */
+}
+
+.button-wrapper span {
+  margin-top: 5px;
+}

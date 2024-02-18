@@ -150,8 +150,9 @@ const dishes = [
     image: "images/GOLDEN DELIGHT.jpg",
     description: "FRESH HOMEMADE CRISPY BRIOCHE / VANILA ICE CREAM / CHOCOLATE",
     //SWEET DELIGHT
-
   },
+  //-----------------sweet delight-----------------
+
 
   // Add remaining dishes here with their details
 ];
@@ -248,4 +249,8 @@ document.getElementById('sweets-button').addEventListener('click', () => {
   sweetsSection.scrollIntoView({ behavior: 'smooth' });
 });
 
-
+var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 2, // Number of buttons visible at a time
+  spaceBetween: 10, // Space between buttons
+  loop: true, // Enable loop mode
+});

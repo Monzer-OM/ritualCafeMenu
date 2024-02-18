@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +16,78 @@
     
 
 </h1>
-<div class="buttons-container">
-  <button id="breakfast-button">Breakfast</button>
-  <button id="sweets-button">Sweets</button>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <div class="button-wrapper">
+        <button id="breakfast-button">
+          <img src="images/CROISSANT.jpeg" alt="Breakfast" />
+        </button>
+        <span>BREAKFAST</span>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="button-wrapper">
+        <button id="sweets-button">
+          <img src="images/MONT BLANC.jpeg" alt="Sweet" />
+        </button>
+        <span>SWEET DELIGHT</span>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="button-wrapper">
+        <button id="manual-button">
+          <img src="images/manual brewed.jpg" alt="Sweet" />
+        </button>
+        <span>MANUAL BREWED</span>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="button-wrapper">
+        <button id="juice-button">
+          <img src="images/juice cover.jpg" alt="Sweet" />
+        </button>
+        <span>SQUEEZED JUICES</span>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="button-wrapper">
+        <button id="cocktails-button">
+          <img src="images/cocktail cover.jpg" alt="Sweet" />
+        </button>
+        <span>INNOCENT COCKTAILS</span>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="button-wrapper">
+        <button id="coffee-button">
+          <img src="images/coffee cover.jpg" alt="Sweet" />
+        </button>
+        <span>PREMIUM COFFEE</span>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="button-wrapper">
+        <button id="bean-button">
+          <img src="images/bean selection cover.jpg" alt="Sweet" />
+        </button>
+        <span>BEAN SELECTION</span>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="button-wrapper">
+        <button id="tea-button">
+          <img src="images/tea cover.jpg" alt="Sweet" />
+        </button>
+        <span>PREMIUM TEA</span>
+      </div>
+    </div>
+
+    <!-- Add more swiper-slide elements for additional buttons -->
+  </div>
 </div>
+
+
 
 
   <div class="menu-container">
@@ -100,8 +171,8 @@
 
     </div>
     
-  <div class="order-container">
-    <h2>Your Order</h2>
+  <div class="order-container" id="order-container">
+    <h2 id="Order list">Your Order</h2>
     <h3>Note: </h3>
     <label for="fname">write your car number:</label>
     <select name="city" id="city">
