@@ -190,7 +190,7 @@ dishes.forEach((dish, index) => {
     listItem.textContent = `${dish.name} - ${dish.price}`;
 
     const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Delete';
+    deleteButton.textContent = '';
     deleteButton.classList.add('delete-button'); // Add this line
 
     deleteButton.addEventListener('click', () => {

@@ -97,6 +97,16 @@ h1 img {
 }
 .delete-button {
   margin-left: 25px ; /* Adjust the margin as needed */
+  /*color: #f00; /* Adjust color as needed */
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: white;
+  background-image: url('images/deleteButton.png');
+  background-size: contain; /* or cover, or set specific dimensions */
+  width: 20px; /* Set the width */
+  height: 20px; /* Set the height */
+  align-items: center;
+  border: none;
 }
 
 .red {
