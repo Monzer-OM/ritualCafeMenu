@@ -284,4 +284,15 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+const floatingButton = document.getElementById('floating-button');
+const orderContainer = document.getElementById('order-container');
+const closeButton = document.getElementById('close-button');
+
+floatingButton.addEventListener('click', () => {
+    orderContainer.style.display = 'block'; // Show the order container
+});
+
+closeButton.addEventListener('click', () => {
+    orderContainer.style.display = 'none'; // Hide the order container
+});
 

@@ -48,11 +48,21 @@ h1 img {
 }
 
 .order-container {
-  margin: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  width: 300px;
+  display: none;
+  z-index: 1000;
+  font-size: 13px;
 }
+
 
 #order-list {
   list-style: none;
@@ -197,23 +207,7 @@ body {
   margin-top: 5px;
 }
 
-.floating-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: white;
-  border-radius: 50%;
-  width: 75px;
-  height: 75px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #333;
-  font-size: 24px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transform: rotate(180deg);
-}
+
 
 .floating-button:hover {
   background-color: #f0f0f0;
@@ -227,4 +221,91 @@ body {
     height: 75px;
     font-size: 20px;
   }
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: gray;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: url('images/orderButton.png');
+  background-size: contain; /* or cover, or set specific dimensions */
+  width: 70px; /* Set the width */
+  height: 70px; /* Set the height */
+  align-items: center;
+}
+
+
+.card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 300px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: none;
+  z-index: 9999;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.card.active {
+  display: block;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+}
+.menu-card-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+#order-list {
+  max-height: 200px; /* 7 items * 32px height per item */
+  overflow-y: auto;
+}
+
+#order-container {
+  font-family: 'Your Chosen Font', sans-serif; 
+  font-size: 12px;
+}
+
+#order-list li {
+  font-family: 'Your Chosen Font', sans-serif; /* Replace 'Your Chosen Font' with the actual font name */
+  font-size: 12px;
+}
+
+#send-order {
+  background-color: #4CAF50; /* Green background */
+  border: none;
+  color: white; /* White text color */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; /* Font size */
+  padding: 10px 20px; /* Padding */
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+}
+
+#send-order:hover {
+  background-color: #45a049; /* Darker green background on hover */
 }

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-Lu7K8qdkcwI7TgQu5+oN7TpIbCFim1nCq18DkpbVNXSvO6K4FMCj5Nc3x5QW4tV2" crossorigin="anonymous">
+
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -16,13 +18,11 @@
     
 
 </h1>
+<!--
 
-<a href="#" id="up-arrow" class="floating-button">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-    <!-- Upward arrow SVG path -->
-    <path fill="currentColor" d="M12 15.41L18.59 9 20 10.41 12 18.41 4 10.41 5.41 9z"/>
-  </svg>
-</a>
+  
+-->
+
 
 
 
@@ -181,38 +181,35 @@
 
     </div>
     
-  <div class="order-container" id="order-container">
-    <h2 id="Order list">Your Order</h2>
-    <h3>Note: </h3>
-    <label for="fname">write your car number:</label>
-    <select name="city" id="city">
-      <option value="Dubai">Dubai</option>
-      <option value="Abu Dhabi">Abu Dhabi</option>
-      <option value="Sharjah">Sharjah</option>
-      <option value="Ras al khaimah">Ras Alkaima</option>
-      <option value="Ajman">Ajman</option>
-      <option value="umm al quwain">Um alquain</option>
-
-    </select>
-
-    <input type="text" id="Car number" name="Car"><br><br>
-    <p>Payment method:</p>
-
-    <input type="radio" id="Cash" name="paymentMethod" value="Cash">
-    <label for="Cash">Cash</label><br>
-    <input type="radio" id="Card" name="paymentMethod" value="Card">
-    <label for="Card">Card</label><br>
-    <p id="payment-message" style="color: red; display: none;">Please choose a payment method.</p>
-
-    <br>
-
-    <ul id="order-list">
-    </ul>
+    <button id="floating-button" class="floating-button">
+       
+  </button>
+  
+  
+    <div class="order-container" id="order-container" style="display: none;">
+        <button class="close-button" id="close-button">Close</button>
+        <h2 id="order-list"></h2>
+        <label for="fname">write your car number:</label>
+        <select name="city" id="city">
+            <option value="Dubai">Dubai</option>
+            <option value="Abu Dhabi">Abu Dhabi</option>
+            <option value="Sharjah">Sharjah</option>
+            <option value="Ras al khaimah">Ras Alkaima</option>
+            <option value="Ajman">Ajman</option>
+            <option value="umm al quwain">Um alquain</option>
+        </select>
+        <input type="text" id="Car number" name="Car"><br><br>
+        <p>Payment method:</p>
+        <input type="radio" id="Cash" name="paymentMethod" value="Cash">
+        <label for="Cash">Cash</label><br>
+        <input type="radio" id="Card" name="paymentMethod" value="Card">
+        <label for="Card">Card</label><br>
+        <p id="payment-message" style="color: red; display: none;">Please choose a payment method.</p><br>
+        <ul id="order-list"></ul>
+        <button id="send-order">Send Order via WhatsApp</button>
+    </div>
     
-    <button id="send-order">Send Order via WhatsApp</button>
 
-    
-  </div>
   <script src="script.js"></script>
 </body>
 </html>
