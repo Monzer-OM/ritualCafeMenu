@@ -103,8 +103,8 @@ h1 img {
   background-color: white;
   background-image: url('images/deleteButton.png');
   background-size: contain; /* or cover, or set specific dimensions */
-  width: 20px; /* Set the width */
-  height: 20px; /* Set the height */
+  width: 25px; /* Set the width */
+  height: 25px; /* Set the height */
   align-items: center;
   border: none;
 }
@@ -299,8 +299,9 @@ body {
 }
 
 #order-list li {
-  font-family: 'Your Chosen Font', sans-serif; /* Replace 'Your Chosen Font' with the actual font name */
-  font-size: 12px;
+  font-family: 'Arial', sans-serif; /* Replace 'Your Chosen Font' with the actual font name */
+  font-size: 21px;
+  font-weight: 500;
 }
 
 #send-order {
