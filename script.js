@@ -295,32 +295,3 @@ floatingButton.addEventListener('click', () => {
 closeButton.addEventListener('click', () => {
     orderContainer.style.display = 'none'; // Hide the order container
 });
-
-
-//add lazy
-const menuContainer = document.querySelector('.menu-container');
-
-dishes.forEach(dish => {
-  const menuCard = document.createElement('div');
-  menuCard.classList.add('menu-card');
-
-  const addButton = document.createElement('button');
-  addButton.classList.add('add-button');
-  addButton.textContent = '+';
-
-  menuCard.appendChild(addButton);
-
-  menuContainer.appendChild(menuCard);
-
-  addButton.addEventListener('click', () => {
-    // Add your logic for handling adding the dish to the order here
-  });
-
-  // Lazy load image
-  const img = new Image();
-  img.src = dish.image;
-  img.loading = 'lazy';
-  menuCard.appendChild(img);
-});
-
-
