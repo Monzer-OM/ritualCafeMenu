@@ -8,7 +8,7 @@ const sendOrderButton = document.getElementById('send-order');
 const dishes = [
   // ---------------Breakfast--------------------
   {
-    name: "CROISSANT",
+    name: "كروسان",
     price: "18",
     image: "images/CROISSANT.jpeg",
     description: "PLAIN / CHEESE / ZAATAR.",
@@ -207,8 +207,8 @@ dishes.forEach((dish, index) => {
   
 
 sendOrderButton.addEventListener('click', () => {
-  let orderText = "Your order at [RETUL]:\n";
-  const carNumber = document.getElementById('Car number').value;
+    let orderText = "طلبك لدى ريتشوال\n";
+    const carNumber = document.getElementById('Car number').value;
   const city = document.getElementById('city').value;
   const payment = document.querySelector('input[name="paymentMethod"]:checked');
   const paymentMessage = document.getElementById('payment-message');
@@ -228,8 +228,8 @@ sendOrderButton.addEventListener('click', () => {
     orderText += `- ${item.textContent}\n`;
   });
 
-  orderText += `Payment Method: ${paymentMethod}\n`;
-  orderText += `Car Number: ${city}  ${carNumber}\nPlease specify any modifications or delivery instructions.`;
+  orderText += ` طريقة الدفع : ${paymentMethod}\n`;
+  orderText += `رقم السيا رة : ${city}  ${carNumber}\nالرجاء اضافة اي ملاحظات اضافية هنا .`;
 
   const phoneNumber = '+5349675591'; // Replace with your phone number
   orderText = orderText.replaceAll('Delete', '');

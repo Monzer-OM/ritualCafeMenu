@@ -1,13 +1,16 @@
 /* Same as before with additions and media query for mobile responsiveness */
 
 body {
-  background-color: #D5BFB0; /* BackGround color */
+  background-color: 	#222222; /* BackGround color */
 }
+
+
 
 h1 {
   font-family: Arial, sans-serif;
   text-align: center;
 }
+
 
 h1 img {
   max-width: 100%;
@@ -40,7 +43,13 @@ h1 img {
 .menu-card h2 {
   font-size: 18px;
   margin-bottom: 5px;
+  
 }
+
+h2 {
+  color: black;
+}
+
 
 .menu-card p {
   font-size: 14px;
@@ -181,6 +190,7 @@ body {
   display: block; /* Display the text as a block element */
   margin-top: 5px; /* Add some space between the button and text */
   font-size: 18px;
+  color: white;
   
 }
 
@@ -319,4 +329,26 @@ body {
 
 #send-order:hover {
   background-color: #45a049; /* Darker green background on hover */
+}
+
+.go-to-arabic {
+  background-color: #D2D7D3; /* Button background color */
+  color: black; /* Button text color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  float: right; /* Float the button to the right */
+  margin: 20px 20px 0 0; /* Add margin for spacing */
+}
+
+.go-to-arabic:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+.fa-language {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+#logo {
+  fill: white; /* Change the fill color to white */
 }
