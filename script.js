@@ -9,7 +9,7 @@ const dishes = [
   // ---------------Breakfast--------------------
   {
     name: "CROISSANT",
-    price: "18",
+    price: "18 AED",
     image: "images/CROISSANT.jpeg",
     description: "PLAIN / CHEESE / ZAATAR.",
     //brakfast
@@ -17,14 +17,14 @@ const dishes = [
   
   {
     name: "BACON EGG BUN",
-    price: "28",
+    price: "28 AED",
     image: "images/BACON EGG BUN.jpeg",
     description: "Tender chicken simmered in a creamy red curry with vegetables and fragrant spices.",
     //brakfast
   },
   {
     name: "FIG TOAST",
-    price: "34",
+    price: "34 AED",
     image: "images/FIG TOAST.jpeg",
     description: "Tender chicken simmered in a creamy red curry with vegetables and fragrant spices.",
     //brakfast
@@ -33,42 +33,42 @@ const dishes = [
 
   {
     name: "SIMIT MUHAMMARA",
-    price: '38',
+    price: '38 AED',
     image: 'images/SIMIT MUHAMMARA.jpg',
     description: 'EGG / MUHAMMARA / TURKISH LABNEH / CHILI BUTTER / SIMIT BREAD',
     //brakfast
   },
   {
     name: 'LIME AND CORN SALAD',
-    price:'34',
+    price:'34 AED',
     image: 'images/LIME AND CORN SALAD.jpg',
     description : "BABY SPINACH / JARJEER ROCKET LEAF / FETA CHEESE / CHERRY TOMATO / GRILLED CORN / LIME / BLACK OLIVE ",
     //brakfast
   },
   {
     name: 'CROQUE MADAME',
-    price: "43",
+    price: "43 AED",
     image: "images/CROQUE MADAME.jpg",
     description: "SOURDOUGH BREAD / BECHAMEL SAUCE / GRUYERE CHEESE / POUCHED EGG / SMOKED TURKEY",
     //breakfast
   },
   {
     name: 'RITUAL CAESAR SALAD',
-    price: "32",
+    price: "32 AED",
     image: 'images/RITUAL CAESAR SALAD.jpg',
     description: "ROMAINE LETTUCE / HOME MADE RITUAL SAUCE / SMOKED BEEF BACON / POACHED EGG / PARMESAN CHEESE / GARLIC CROUTONS",
     //breakfast
   },
   {
     name: "BURATA SALAD",
-    price: "47",
+    price: "47 AED",
     image: 'images/BURATA SALAD.jpg',
     description: 'BURATA CHEESE / DATES / BABY SPINACH SALAD',
     //breakfast
   },
   {
     name: "AVOCADO POACHED EGG",
-    price: "39",
+    price: "39 AED",
     image: "images/AVOCADO POACHED EGG.jpg",
     description: "HOMEMADE SOUR DOUGH AVOCADO WITH CHOICE OF EGG", 
     //breakfast
@@ -77,7 +77,7 @@ const dishes = [
 
   {
     name: "PORTOBELLO BENEDICT",
-    price: "43",
+    price: "43 AED",
     image: "images/PORTOBELLO BENEDICT.jpg",
     description: "PLAIN CROISSANT / TRUFFLE BECHAMEL / PORTOBELLO MUSHROOM / HOLLANDAISE SAUCE / EGG / PAPRIKA",
     //breakfast
@@ -85,42 +85,42 @@ const dishes = [
 
   {
     name: "TURKISH EGG",
-    price: '38',
+    price: '38 AED',
     image: 'images/TURKISH EGG.jpg',
     description: "FRESH LABNAH / YOGURT / PARSLEY / MINT LEAF / BLACK PEPPER",
     //breakfast
   },
   {
     name: "MUSHROOM TOAST",
-    price: "34",
+    price: "34 AED",
     image: "images/MUSHROOM TOAST.jpg",
     description: "HOMEMADE SOUR DOUGH / PHILADELPHIA CHEESE / TRIO MUSHROOM",
     //breakfast
   },
   {
     name: "MOZZARELLA PESTO",
-    price: "34",
+    price: "34 AED",
     image: "images/MOZZARELLA PESTO.jpg",
     description: "SOUR DOUGH BREAD / PESTO / CHERRY TOMATO / BUFFALO MOZZARELLA CHEESE",
     //breakfast
   },
   {
     name: "AVOCADO TOAST",
-    price: "36",
+    price: "36 AED",
     image: "images/AVOCADO TOAST.jpg",
     description: "HOMEMADE SOUR DOUGH / FETA CHEESE / AVOCADO / BLACK SEED / CHILI FLAKE / LEMON",
     //breakfast
   },
   {
     name: "AVOCADO SCRAMBLE EGG",
-    price: "39",
+    price: "39 AED",
     image: "images/AVOCADO SCRAMBLE EGG.jpg",
     description:"HOMEMADE SOUR DOUGH AVOCADO WITH CHOICE OF EGG",
     //breakfast
   },
   {
     name: "OMELETTE",
-    price: "36",
+    price: "36 AED",
     image: "images/OMELETTE.jpg",
     description: "STUFFED: CHEESE.....CHOOSE: TOMATO / MUSHROOM / SPINACH / MIXED SALAD",
     //breakfast
@@ -128,37 +128,34 @@ const dishes = [
   //----------------sweet delight------------------
   {
     name: "FLUFFY CHEESE CAKE",
-    price: "36",
+    price: "36 AED",
     image: "images/FLUFFY CHEESE CAKE.jpg",
     description: 'CREAM CHEESE / LEMON EXTRACT / DIGESTIVE BISCUIT / BLUEBERRY SAUCE',
     //SWEET DELIGHT
   },
   {
     name: "MONT BLANC",
-    price: "36",
+    price: "36 AED",
     image: "images/MONT BLANC.jpeg",
     description: "BAKED CHOCOLATE FUDGE / ICE CREAM / MILK CHOCOLATE SAUCE.",
     //SWEET DELIGHT
   },
   {
     name: "PEANUT BUTTER TART",
-    price: "36",
+    price: "36 AED",
     image: "images/PEANUT BUTTER TART.jpg",
     description: "CHOCOLATE TART BASE / TART GARNISH",
     //SWEET DELIGHT
   },
   {
     name: "GOLDEN DELIGHT",
-    price: "43",
+    price: "43 AED",
     image: "images/GOLDEN DELIGHT.jpg",
     description: "FRESH HOMEMADE CRISPY BRIOCHE / VANILA ICE CREAM / CHOCOLATE",
     //SWEET DELIGHT
-  },
-  //-----------------sweet delight-----------------
-
-
-  // Add remaining dishes here with their details
+  }
 ];
+
 
 dishes.forEach((dish, index) => {
   const card = document.createElement('div');
@@ -173,13 +170,13 @@ dishes.forEach((dish, index) => {
   h2.textContent = dish.name;
   card.appendChild(h2);
 
-  const price = document.createElement('p');
-  price.textContent = `Price: ${dish.price}`;
-  card.appendChild(price);
-
   const description = document.createElement('p');
   description.textContent = dish.description;
   card.appendChild(description);
+
+  const price = document.createElement('p');
+  price.textContent = `Price: ${dish.price}`;
+  card.appendChild(price);
 
   const addButton = document.createElement('button');
   addButton.classList.add('add-button');
@@ -303,3 +300,32 @@ function goToArabic() {
 function goToEnglish(){
   window.location.href = "index.html";
 }
+
+
+
+function calculateTotalPrice() {
+  let totalPrice = 0;
+  const orderList = document.getElementById('order-list');
+  orderList.querySelectorAll('li').forEach((item) => {
+    const name = item.textContent.split('-')[0].trim();
+    const priceString = item.textContent.split('-')[1].trim();
+    const price = parseFloat(priceString);
+    totalPrice += price;
+
+    // Display price for each item
+    const itemPriceElement = document.createElement('span');
+    itemPriceElement.textContent = `${name}: ${priceString} AED`;
+    item.appendChild(itemPriceElement);
+  });
+  return totalPrice.toFixed(2); // Round to 2 decimal places
+}
+
+function updateTotalPrice() {
+  const totalPriceElement = document.getElementById('total-price');
+  const totalPrice = calculateTotalPrice(); // Calculate total price
+  totalPriceElement.textContent = `Total Price: ${totalPrice} AED`; // Update total price display
+}
+
+// Call updateTotalPrice whenever an item is added or removed from the order list
+orderList.addEventListener('DOMNodeInserted', updateTotalPrice);
+orderList.addEventListener('DOMNodeRemoved', updateTotalPrice);
