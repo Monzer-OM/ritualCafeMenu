@@ -300,32 +300,3 @@ function goToArabic() {
 function goToEnglish(){
   window.location.href = "index.html";
 }
-
-
-
-function calculateTotalPrice() {
-  let totalPrice = 0;
-  const orderList = document.getElementById('order-list');
-  orderList.querySelectorAll('li').forEach((item) => {
-    const name = item.textContent.split('-')[0].trim();
-    const priceString = item.textContent.split('-')[1].trim();
-    const price = parseFloat(priceString);
-    totalPrice += price;
-
-    // Display price for each item
-    const itemPriceElement = document.createElement('span');
-    itemPriceElement.textContent = `${name}: ${priceString} AED`;
-    item.appendChild(itemPriceElement);
-  });
-  return totalPrice.toFixed(2); // Round to 2 decimal places
-}
-
-function updateTotalPrice() {
-  const totalPriceElement = document.getElementById('total-price');
-  const totalPrice = calculateTotalPrice(); // Calculate total price
-  totalPriceElement.textContent = `Total Price: ${totalPrice} AED`; // Update total price display
-}
-
-// Call updateTotalPrice whenever an item is added or removed from the order list
-orderList.addEventListener('DOMNodeInserted', updateTotalPrice);
-orderList.addEventListener('DOMNodeRemoved', updateTotalPrice);
