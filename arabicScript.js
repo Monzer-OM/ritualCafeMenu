@@ -167,7 +167,7 @@ function updateTotalPrice() {
     totalPrice += price;
   });
 
-  totalPriceElement.textContent = `Total price: ${totalPrice.toFixed(2)} د.إ`;
+  totalPriceElement.textContent = `الاجمالي : ${totalPrice.toFixed(2)} د.إ`;
   return totalPrice;
 }
 
