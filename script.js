@@ -1,12 +1,15 @@
 const menuCards = document.querySelectorAll('.menu-card');
 const orderList = document.getElementById('order-list');
 const sendOrderButton = document.getElementById('send-order');
+const totalPriceElement = document.getElementById('total-price');
+
 
 
 
 // Replace this with actual menu data
 const dishes = [
   // ---------------Breakfast--------------------
+
   {
     name: "CROISSANT",
     price: "18 AED",
@@ -19,14 +22,14 @@ const dishes = [
     name: "BACON EGG BUN",
     price: "28 AED",
     image: "images/BACON EGG BUN.jpeg",
-    description: "Tender chicken simmered in a creamy red curry with vegetables and fragrant spices.",
+    description: "SOFT BUN / SCRAMBLED EGG / BACON / SRIRACHA SAUCE.",
     //brakfast
   },
   {
     name: "FIG TOAST",
     price: "34 AED",
     image: "images/FIG TOAST.jpeg",
-    description: "Tender chicken simmered in a creamy red curry with vegetables and fragrant spices.",
+    description: "SOURDOUGH BREAD / ZAATAR / RIPE FIGS / ROCCA LEAVES / HONEY.",
     //brakfast
 
   },
@@ -125,6 +128,7 @@ const dishes = [
     description: "STUFFED: CHEESE.....CHOOSE: TOMATO / MUSHROOM / SPINACH / MIXED SALAD",
     //breakfast
   },
+  
   //----------------sweet delight------------------
   {
     name: "FLUFFY CHEESE CAKE",
@@ -156,7 +160,22 @@ const dishes = [
   }
 ];
 
+// Function to calculate and display the total price
+function updateTotalPrice() {
+  let totalPrice = 0;
+  const orderItems = orderList.querySelectorAll('li');
+  orderItems.forEach(item => {
+    const priceString = item.textContent.split(' - ')[1]; // Extract price from item text
+    const price = parseFloat(priceString.slice(0, -3)); // Convert string price to number
+    totalPrice += price;
+  });
 
+  totalPriceElement.textContent = `Total price: ${totalPrice.toFixed(2)} AED`;
+  return totalPrice;
+}
+
+
+// Event listener for adding items to the order list
 dishes.forEach((dish, index) => {
   const card = document.createElement('div');
   card.classList.add('menu-card');
@@ -182,24 +201,25 @@ dishes.forEach((dish, index) => {
   addButton.classList.add('add-button');
   addButton.textContent = '+';
   addButton.addEventListener('click', () => {
-    // Add item to order list
+    // Add item to order list and update total price
     const listItem = document.createElement('li');
     listItem.textContent = `${dish.name} - ${dish.price}`;
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = '';
-    deleteButton.classList.add('delete-button'); // Add this line
-
+    deleteButton.classList.add('delete-button');
     deleteButton.addEventListener('click', () => {
       listItem.remove();
+      updateTotalPrice();
     });
 
     listItem.appendChild(deleteButton);
     orderList.appendChild(listItem);
+    updateTotalPrice();
   });
   card.appendChild(addButton);
 
-  menuCards.item(index).replaceWith(card); // Replace placeholder dishes with real data
+  menuCards.item(index).replaceWith(card);
 });
   
 
@@ -209,6 +229,8 @@ sendOrderButton.addEventListener('click', () => {
   const city = document.getElementById('city').value;
   const payment = document.querySelector('input[name="paymentMethod"]:checked');
   const paymentMessage = document.getElementById('payment-message');
+  const allergy = document.getElementById('allergy').value;
+  const totalPrice22 = updateTotalPrice(); // Get the total price
 
   
   if (!payment) {
@@ -220,13 +242,16 @@ sendOrderButton.addEventListener('click', () => {
 
   const paymentMethod = payment.value;
   const orderItems = orderList.querySelectorAll('li');
+
   
   orderItems.forEach(item => {
     orderText += `- ${item.textContent}\n`;
   });
 
+  //orderText += `\nTotal: ${totalPrice}`;
   orderText += `Payment Method: ${paymentMethod}\n`;
   orderText += `Car Number: ${city}  ${carNumber}\nPlease specify any modifications or delivery instructions.`;
+  orderText += `\nallergy: ${allergy}\nTotal Price: ${totalPrice22.toFixed(2)} AED`;
 
   const phoneNumber = '+5349675591'; // Replace with your phone number
   orderText = orderText.replaceAll('Delete', '');
@@ -236,6 +261,9 @@ sendOrderButton.addEventListener('click', () => {
 
   window.open(url, '_blank');
 });
+
+updateTotalPrice();
+
 
 // Scroll to the breakfast section
 document.getElementById('breakfast-button').addEventListener('click', () => {
@@ -300,3 +328,4 @@ function goToArabic() {
 function goToEnglish(){
   window.location.href = "index.html";
 }
+

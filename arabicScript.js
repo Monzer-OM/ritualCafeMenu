@@ -1,165 +1,178 @@
 const menuCards = document.querySelectorAll('.menu-card');
 const orderList = document.getElementById('order-list');
 const sendOrderButton = document.getElementById('send-order');
+const totalPriceElement = document.getElementById('total-price');
+
 
 
 
 // Replace this with actual menu data
 const dishes = [
   // ---------------Breakfast--------------------
+
   {
-    name: "كروسان",
-    price: "18",
+    name: "كرواسون",
+    price: "18 د.إ",
     image: "images/CROISSANT.jpeg",
-    description: "PLAIN / CHEESE / ZAATAR.",
+    description: "عادي / جبنة / زعتر.",
     //brakfast
-  },
-  
-  {
-    name: "BACON EGG BUN",
-    price: "28",
+},
+{
+    name: "خبز بيض بيكون",
+    price: "28 د.إ",
     image: "images/BACON EGG BUN.jpeg",
-    description: "Tender chicken simmered in a creamy red curry with vegetables and fragrant spices.",
+    description: "خبز ناعم / بيض مخفوق / لحم بيكون / صلصة سيراتشا.",
     //brakfast
-  },
-  {
-    name: "FIG TOAST",
-    price: "34",
+},
+{
+    name: "توست التين",
+    price: "34 د.إ",
     image: "images/FIG TOAST.jpeg",
-    description: "Tender chicken simmered in a creamy red curry with vegetables and fragrant spices.",
+    description: "خبز زنجبيل / زعتر / تين ناضج / أوراق روكا / عسل.",
     //brakfast
-
-  },
-
-  {
-    name: "SIMIT MUHAMMARA",
-    price: '38',
+},
+{
+    name: "سيميت محمرة",
+    price: '38 د.إ',
     image: 'images/SIMIT MUHAMMARA.jpg',
-    description: 'EGG / MUHAMMARA / TURKISH LABNEH / CHILI BUTTER / SIMIT BREAD',
+    description: 'بيض / محمرة / لبنة تركية / زبدة الفلفل الحار / خبز سيميت',
     //brakfast
-  },
-  {
-    name: 'LIME AND CORN SALAD',
-    price:'34',
+},
+{
+    name: 'سلطة الليمون والذرة',
+    price:'34 د.إ',
     image: 'images/LIME AND CORN SALAD.jpg',
-    description : "BABY SPINACH / JARJEER ROCKET LEAF / FETA CHEESE / CHERRY TOMATO / GRILLED CORN / LIME / BLACK OLIVE ",
+    description : "سبانخ صغيرة / ورقة جرجير / جبنة فيتا / طماطم كرز / ذرة مشوية / ليمون / زيتون اسود ",
     //brakfast
-  },
-  {
-    name: 'CROQUE MADAME',
-    price: "43",
+},
+{
+    name: 'كروك مدام',
+    price: "43 د.إ",
     image: "images/CROQUE MADAME.jpg",
-    description: "SOURDOUGH BREAD / BECHAMEL SAUCE / GRUYERE CHEESE / POUCHED EGG / SMOKED TURKEY",
+    description: "خبز زنجبيل / صلصة بيشاميل / جبن جرويير / بيض مسلوق / ديك رومي مدخن",
     //breakfast
-  },
-  {
-    name: 'RITUAL CAESAR SALAD',
-    price: "32",
+},
+{
+    name: 'سلطة سيزر ريتوال',
+    price: "32 د.إ",
     image: 'images/RITUAL CAESAR SALAD.jpg',
-    description: "ROMAINE LETTUCE / HOME MADE RITUAL SAUCE / SMOKED BEEF BACON / POACHED EGG / PARMESAN CHEESE / GARLIC CROUTONS",
-    //breakfast
-  },
-  {
-    name: "BURATA SALAD",
-    price: "47",
+    description: "خس رومين / صلصة ريتوال المنزلية / لحم بقر مدخن بالدخان / بيض مسلوق / جبنة بارميزان / كروتون ثوم",
+    //brakfast
+},
+{
+    name: "سلطة البوراتبيلو",
+    price: "47 د.إ",
     image: 'images/BURATA SALAD.jpg',
-    description: 'BURATA CHEESE / DATES / BABY SPINACH SALAD',
-    //breakfast
-  },
-  {
-    name: "AVOCADO POACHED EGG",
-    price: "39",
+    description: 'جبنة بوراتا / تمر / سلطة سبانخ صغيرة',
+    //brakfast
+},
+{
+    name: "بيض المحار",
+    price: "39 د.إ",
     image: "images/AVOCADO POACHED EGG.jpg",
-    description: "HOMEMADE SOUR DOUGH AVOCADO WITH CHOICE OF EGG", 
+    description: "خبز حمضيات مصنوع منزليًا مع اختيار البيض", 
     //breakfast
-  }, 
-  
+}, 
 
-  {
-    name: "PORTOBELLO BENEDICT",
-    price: "43",
+
+{
+    name: "بورتوبيلو بينيديكت",
+    price: "43 د.إ",
     image: "images/PORTOBELLO BENEDICT.jpg",
-    description: "PLAIN CROISSANT / TRUFFLE BECHAMEL / PORTOBELLO MUSHROOM / HOLLANDAISE SAUCE / EGG / PAPRIKA",
-    //breakfast
-  },
+    description: "كرواسون عادي / صلصة بيشاميل الكمأة / فطر بورتوبيلو / صلصة هولنداز / بيض / بابريكا",
+    //brakfast
+},
 
-  {
-    name: "TURKISH EGG",
-    price: '38',
+{
+    name: "بيض تركي",
+    price: '38 د.إ',
     image: 'images/TURKISH EGG.jpg',
-    description: "FRESH LABNAH / YOGURT / PARSLEY / MINT LEAF / BLACK PEPPER",
-    //breakfast
-  },
-  {
-    name: "MUSHROOM TOAST",
-    price: "34",
+    description: "لبنة طازجة / زبادي / بقدونس / ورق النعناع / فلفل أسود",
+    //brakfast
+},
+{
+    name: "توست الفطر",
+    price: "34 د.إ",
     image: "images/MUSHROOM TOAST.jpg",
-    description: "HOMEMADE SOUR DOUGH / PHILADELPHIA CHEESE / TRIO MUSHROOM",
-    //breakfast
-  },
-  {
-    name: "MOZZARELLA PESTO",
-    price: "34",
+    description: "خبز حمضيات مصنوع منزليًا / جبنة فيلادلفيا / مزيج فطر",
+    //brakfast
+},
+{
+    name: "موزاريلا بيستو",
+    price: "34 د.إ",
     image: "images/MOZZARELLA PESTO.jpg",
-    description: "SOUR DOUGH BREAD / PESTO / CHERRY TOMATO / BUFFALO MOZZARELLA CHEESE",
-    //breakfast
-  },
-  {
-    name: "AVOCADO TOAST",
-    price: "36",
+    description: "خبز حمضيات / صلصة بيستو / طماطم كرز / جبنة موتزاريلا بافالو",
+    //brakfast
+},
+{
+    name: "توست الأفوكادو",
+    price: "36 د.إ",
     image: "images/AVOCADO TOAST.jpg",
-    description: "HOMEMADE SOUR DOUGH / FETA CHEESE / AVOCADO / BLACK SEED / CHILI FLAKE / LEMON",
-    //breakfast
-  },
-  {
-    name: "AVOCADO SCRAMBLE EGG",
-    price: "39",
+    description: "خبز حمضيات مصنوع منزليًا / جبنة فيتا / أفوكادو / بذور سوداء / رقائق فلفل حار / ليمون",
+    //brakfast
+},
+{
+    name: "بيض المحار الأفوكادو",
+    price: "39 د.إ",
     image: "images/AVOCADO SCRAMBLE EGG.jpg",
-    description:"HOMEMADE SOUR DOUGH AVOCADO WITH CHOICE OF EGG",
-    //breakfast
-  },
-  {
-    name: "OMELETTE",
-    price: "36",
+    description:"خبز حمضيات مصنوع منزليًا مع اختيار البيض",
+    //brakfast
+},
+{
+    name: "أومليت",
+    price: "36 د.إ",
     image: "images/OMELETTE.jpg",
-    description: "STUFFED: CHEESE.....CHOOSE: TOMATO / MUSHROOM / SPINACH / MIXED SALAD",
-    //breakfast
-  },
-  //----------------sweet delight------------------
-  {
-    name: "FLUFFY CHEESE CAKE",
-    price: "36",
+    description: "محشوة: جبنة.....اختر: طماطم / فطر / سبانخ / سلطة مشكلة",
+    //brakfast
+},
+
+//----------------sweet delight------------------
+{
+    name: "تشيز كيك ناعم",
+    price: "36 د.إ",
     image: "images/FLUFFY CHEESE CAKE.jpg",
-    description: 'CREAM CHEESE / LEMON EXTRACT / DIGESTIVE BISCUIT / BLUEBERRY SAUCE',
+    description: 'جبن كريمي / مستخلص ليمون / بسكويت هضمي / صلصة توت بري',
     //SWEET DELIGHT
-  },
-  {
-    name: "MONT BLANC",
-    price: "36",
+},
+{
+    name: "مون بلان",
+    price: "36 د.إ",
     image: "images/MONT BLANC.jpeg",
-    description: "BAKED CHOCOLATE FUDGE / ICE CREAM / MILK CHOCOLATE SAUCE.",
+    description: "شوكولاتة فطيرة مخبوزة / آيس كريم / صلصة شوكولاتة حليب.",
     //SWEET DELIGHT
-  },
-  {
-    name: "PEANUT BUTTER TART",
-    price: "36",
+},
+{
+    name: "تارت الفول السوداني",
+    price: "36 د.إ",
     image: "images/PEANUT BUTTER TART.jpg",
-    description: "CHOCOLATE TART BASE / TART GARNISH",
+    description: "قاعدة تارت شوكولاتة / زخرفة تارت",
     //SWEET DELIGHT
-  },
-  {
-    name: "GOLDEN DELIGHT",
-    price: "43",
+},
+{
+    name: "السعادة الذهبية",
+    price: "43 د.إ",
     image: "images/GOLDEN DELIGHT.jpg",
-    description: "FRESH HOMEMADE CRISPY BRIOCHE / VANILA ICE CREAM / CHOCOLATE",
+    description: "بريوش كريسبي جديد مصنوع منزليًا / آيس كريم فانيليا / شوكولاتة",
     //SWEET DELIGHT
-  },
-  //-----------------sweet delight-----------------
+}
 
-
-  // Add remaining dishes here with their details
 ];
+// Function to calculate and display the total price
+function updateTotalPrice() {
+  let totalPrice = 0;
+  const orderItems = orderList.querySelectorAll('li');
+  orderItems.forEach(item => {
+    const priceString = item.textContent.split(' - ')[1]; // Extract price from item text
+    const price = parseFloat(priceString.slice(0, -3)); // Convert string price to number
+    totalPrice += price;
+  });
 
+  totalPriceElement.textContent = `Total price: ${totalPrice.toFixed(2)} د.إ`;
+  return totalPrice;
+}
+
+
+// Event listener for adding items to the order list
 dishes.forEach((dish, index) => {
   const card = document.createElement('div');
   card.classList.add('menu-card');
@@ -173,45 +186,48 @@ dishes.forEach((dish, index) => {
   h2.textContent = dish.name;
   card.appendChild(h2);
 
-  const price = document.createElement('p');
-  price.textContent = `Price: ${dish.price}`;
-  card.appendChild(price);
-
   const description = document.createElement('p');
   description.textContent = dish.description;
   card.appendChild(description);
+
+  const price = document.createElement('p');
+  price.textContent = `السعر : ${dish.price}`;
+  card.appendChild(price);
 
   const addButton = document.createElement('button');
   addButton.classList.add('add-button');
   addButton.textContent = '+';
   addButton.addEventListener('click', () => {
-    // Add item to order list
+    // Add item to order list and update total price
     const listItem = document.createElement('li');
     listItem.textContent = `${dish.name} - ${dish.price}`;
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = '';
-    deleteButton.classList.add('delete-button'); // Add this line
-
+    deleteButton.classList.add('delete-button');
     deleteButton.addEventListener('click', () => {
       listItem.remove();
+      updateTotalPrice();
     });
 
     listItem.appendChild(deleteButton);
     orderList.appendChild(listItem);
+    updateTotalPrice();
   });
   card.appendChild(addButton);
 
-  menuCards.item(index).replaceWith(card); // Replace placeholder dishes with real data
+  menuCards.item(index).replaceWith(card);
 });
   
 
 sendOrderButton.addEventListener('click', () => {
-    let orderText = "طلبك لدى ريتشوال\n";
-    const carNumber = document.getElementById('Car number').value;
+  let orderText = "طلبك لدى ريتشوال \n";
+  const carNumber = document.getElementById('Car number').value;
   const city = document.getElementById('city').value;
   const payment = document.querySelector('input[name="paymentMethod"]:checked');
   const paymentMessage = document.getElementById('payment-message');
+  const allergy = document.getElementById('allergy').value;
+  const totalPrice22 = updateTotalPrice(); // Get the total price
 
   
   if (!payment) {
@@ -223,13 +239,17 @@ sendOrderButton.addEventListener('click', () => {
 
   const paymentMethod = payment.value;
   const orderItems = orderList.querySelectorAll('li');
+
   
   orderItems.forEach(item => {
     orderText += `- ${item.textContent}\n`;
   });
 
-  orderText += ` طريقة الدفع : ${paymentMethod}\n`;
-  orderText += `رقم السيا رة : ${city}  ${carNumber}\nالرجاء اضافة اي ملاحظات اضافية هنا .`;
+  //orderText += `\nTotal: ${totalPrice}`;
+  orderText += `طريقه الدفع: ${paymentMethod}\n`;
+  orderText += `رقم السيارة: ${city} ${carNumber}\nالرجاء توضيح أي تعديلات أو تعليمات للتسليم.\n.`;
+  orderText += `الحساسية: ${allergy}\n  السعر الإجمالي: ${totalPrice22.toFixed(2)} درهم إماراتي`;
+
 
   const phoneNumber = '+5349675591'; // Replace with your phone number
   orderText = orderText.replaceAll('Delete', '');
@@ -239,6 +259,9 @@ sendOrderButton.addEventListener('click', () => {
 
   window.open(url, '_blank');
 });
+
+updateTotalPrice();
+
 
 // Scroll to the breakfast section
 document.getElementById('breakfast-button').addEventListener('click', () => {
@@ -303,3 +326,4 @@ function goToArabic() {
 function goToEnglish(){
   window.location.href = "index.html";
 }
+

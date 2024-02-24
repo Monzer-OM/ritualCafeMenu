@@ -29,77 +29,76 @@
 
 
 
-<div class="swiper-container">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <div class="button-wrapper">
-        <button id="breakfast-button">
-          <img src="images/CROISSANT.jpeg" alt="Breakfast" />
-        </button>
-        <span>BREAKFAST</span>
+ <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="button-wrapper">
+          <button id="breakfast-button">
+            <img src="images/CROISSANT.jpeg" alt="Breakfast" />
+          </button>
+          <span>الفطور</span>
+        </div>
       </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="button-wrapper">
-        <button id="sweets-button">
-          <img src="images/MONT BLANC.jpeg" alt="Sweet" />
-        </button>
-        <span>SWEET DELIGHT</span>
+      <div class="swiper-slide">
+        <div class="button-wrapper">
+          <button id="sweets-button">
+            <img src="images/MONT BLANC.jpeg" alt="Sweet" />
+          </button>
+          <span>الحلويات</span>
+        </div>
       </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="button-wrapper">
-        <button id="manual-button">
-          <img src="images/manual brewed.jpg" alt="Sweet" />
-        </button>
-        <span>MANUAL BREWED</span>
+      <div class="swiper-slide">
+        <div class="button-wrapper">
+          <button id="manual-button">
+            <img src="images/manual brewed.jpg" alt="Sweet" />
+          </button>
+          <span>قهوة محضرة يدويا</span>
+        </div>
       </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="button-wrapper">
-        <button id="juice-button">
-          <img src="images/juice cover.jpg" alt="Sweet" />
-        </button>
-        <span>SQUEEZED JUICES</span>
+      <div class="swiper-slide">
+        <div class="button-wrapper">
+          <button id="juice-button">
+            <img src="images/juice cover.jpg" alt="Sweet" />
+          </button>
+          <span>عصائر</span>
+        </div>
       </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="button-wrapper">
-        <button id="cocktails-button">
-          <img src="images/cocktail cover.jpg" alt="Sweet" />
-        </button>
-        <span>INNOCENT COCKTAILS</span>
+      <div class="swiper-slide">
+        <div class="button-wrapper">
+          <button id="cocktails-button">
+            <img src="images/cocktail cover.jpg" alt="Sweet" />
+          </button>
+          <span>كوكتيل</span>
+        </div>
       </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="button-wrapper">
-        <button id="coffee-button">
-          <img src="images/coffee cover.jpg" alt="Sweet" />
-        </button>
-        <span>PREMIUM COFFEE</span>
+      <div class="swiper-slide">
+        <div class="button-wrapper">
+          <button id="coffee-button">
+            <img src="images/coffee cover.jpg" alt="Sweet" />
+          </button>
+          <span>قهوة مختصة</span>
+        </div>
       </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="button-wrapper">
-        <button id="bean-button">
-          <img src="images/bean selection cover.jpg" alt="Sweet" />
-        </button>
-        <span>BEAN SELECTION</span>
+      <div class="swiper-slide">
+        <div class="button-wrapper">
+          <button id="bean-button">
+            <img src="images/bean selection cover.jpg" alt="Sweet" />
+          </button>
+          <span>حبوب مختارة</span>
+        </div>
       </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="button-wrapper">
-        <button id="tea-button">
-          <img src="images/tea cover.jpg" alt="Sweet" />
-        </button>
-        <span>PREMIUM TEA</span>
+      <div class="swiper-slide">
+        <div class="button-wrapper">
+          <button id="tea-button">
+            <img src="images/tea cover.jpg" alt="Sweet" />
+          </button>
+          <span>شاي بريميوم</span>
+        </div>
       </div>
-    </div>
 
-    <!-- Add more swiper-slide elements for additional buttons -->
+      <!-- Add more swiper-slide elements for additional buttons -->
+    </div>
   </div>
-</div>
-
 
 
 
@@ -190,10 +189,10 @@
   
   
     <div class="order-container" id="order-container" style="display: none;">
-        <button class="close-button" id="close-button">Close</button>
+        <button class="close-button" id="close-button">اغلاق</button>
         <h2 id="order-list"></h2>
         <p id="total-price" style="font-size: 18px;">Total price: </p>
-
+      
         <label for="fname">معلومات التوصيل الى السيارة</label>
         <select name="city" id="city">
             <option value="Dubai">دبي</option>
@@ -204,12 +203,14 @@
             <option value="umm al quwain">ام القيوين</option>
         </select>
         <input type="text" id="Car number" name="Car"><br><br>
+        <p>هل لديك اي حساسية. </p>
+        <input type="text" id="allergy" name="allergy"><br><br>
         <p>: طريقة الدفع </p>
         <input type="radio" id="Cash" name="paymentMethod" value="Cash">
         <label for="Cash">نقد</label><br>
         <input type="radio" id="Card" name="paymentMethod" value="Card">
         <label for="Card">كرت</label><br>
-        <p id="payment-message" style="color: red; display: none;">Please choose a payment method.</p><br>
+        <p id="payment-message" style="color: red; display: none;">الرجاء اختيار طريقة الدفع.</p><br>
         <ul id="order-list"></ul>
         <button id="send-order">ارسال الطلب عن طريق الواتساب</button>
     </div>
