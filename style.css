@@ -1,7 +1,7 @@
 /* Same as before with additions and media query for mobile responsiveness */
 
 body {
-  background-color: 	#999998; /* BackGround color */
+  background-color: 	#222222; /* BackGround color */
 }
 
 
@@ -24,7 +24,7 @@ h1 img {
 }
 
 .menu-card {
-  background-color: #f5f5f5;
+  background-color: #999998;
   border-radius: 5px;
   padding: 15px;
   /* Remove fixed width; grid will determine size */
@@ -32,6 +32,7 @@ h1 img {
   text-align: center;
   display: flex;
   margin-top: 10px;
+  color: white; /*  ---------------------*/
 }
 
 .menu-card img {
@@ -47,7 +48,7 @@ h1 img {
 }
 
 h2 {
-  color: black;
+  color: white;  /*----------------------*/
 }
 
 
