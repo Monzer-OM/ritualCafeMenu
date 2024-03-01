@@ -251,7 +251,7 @@ sendOrderButton.addEventListener('click', () => {
   orderText += `الحساسية: ${allergy}\n  السعر الإجمالي: ${totalPrice22.toFixed(2)} درهم إماراتي`;
 
 
-  const phoneNumber = '+5349675591'; // Replace with your phone number
+  const phoneNumber = '+97137532600'; // Replace with your phone number
   orderText = orderText.replaceAll('Delete', '');
 
   const encodedText = encodeURIComponent(orderText);
